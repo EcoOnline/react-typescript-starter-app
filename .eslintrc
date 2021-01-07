@@ -1,0 +1,92 @@
+{
+    "parser": "babel-eslint",
+    "plugins": ["babel", "react-hooks", "prettier", "import"],
+    "ignorePatterns": ["**/node_modules/*", "**/public/**", "**/*.d.ts"],
+    "root": true,
+    "env": {
+        "es6": true,
+        "node": true,
+        "jest": true,
+        "browser": true
+    },
+    "extends": ["eslint:recommended", "plugin:react/recommended", "prettier", "prettier/babel", "prettier/react"],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "classes": true
+        },
+        "sourceType": "module",
+        "ecmaVersion": 2018
+    },
+    "rules": {
+        "no-unused-vars": [
+            "error",
+            {
+                "argsIgnorePattern": "^__|^React",
+                "varsIgnorePattern": "^__|^React"
+            }
+        ],
+        "react/display-name": "off",
+        "react-hooks/rules-of-hooks": "warn",
+        "react/prop-types": "off",
+        "react/jsx-curly-brace-presence": [
+            "error",
+            {
+                "props": "never",
+                "children": "never"
+            }
+        ],
+        "import/first": "error"
+    },
+    "settings": {
+        "react": {
+            "version": "latest"
+        }
+    },
+    "overrides": [
+        {
+            "files": ["*.ts", "*.tsx"],
+            "env": {
+                "browser": true,
+                "es6": true,
+                "node": true
+            },
+            "extends": [
+                "eslint:recommended",
+                "plugin:react-hooks/recommended",
+                "plugin:@typescript-eslint/eslint-recommended",
+                "plugin:@typescript-eslint/recommended"
+            ],
+            "globals": {
+                "Atomics": "readonly",
+                "SharedArrayBuffer": "readonly"
+            },
+            "parser": "@typescript-eslint/parser",
+            "parserOptions": {
+                "createDefaultProgram": true,
+                "ecmaFeatures": {
+                    "jsx": true
+                },
+                "ecmaVersion": 2018,
+                "sourceType": "module",
+                "project": "./tsconfig.json"
+            },
+            "plugins": ["@typescript-eslint"],
+            "rules": {
+                "linebreak-style": ["error", "unix"],
+                "quotes": ["error", "single"],
+                "comma-dangle": ["off", "always-multiline"],
+                "@typescript-eslint/no-explicit-any": 0,
+                "@typescript-eslint/member-delimiter-style": 0,
+                "@typescript-eslint/ban-ts-ignore": 0,
+                "react/jsx-closing-bracket-location": [1, "tag-aligned"],
+                "react/jsx-first-prop-new-line": [1, "multiline"],
+                "react/jsx-max-props-per-line": [
+                    1,
+                    {
+                        "maximum": 1
+                    }
+                ]
+            }
+        }
+    ]
+}
