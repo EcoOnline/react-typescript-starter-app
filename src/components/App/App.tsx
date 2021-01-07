@@ -2,16 +2,23 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core'
 import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'
+import clsx from 'clsx'
 
-const useStyles = makeStyles((theme) => ({
-    App: {
+const useStyles = makeStyles(() => ({
+    body: {
+        margin: 0,
+    },
+    code: {
+        fontFamily: 'source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace',
+    },
+    app: {
         textAlign: 'center',
     },
-    AppLogo: {
+    appLogo: {
         height: '40vmin',
         pointerEvents: 'none',
     },
-    AppHeader: {
+    appHeader: {
         backgroundColor: '#282c34',
         minHeight: '100vh',
         display: 'flex',
@@ -21,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: 'calc(10px + 2vmin)',
         color: 'white',
     },
-    AppLink: {
+    appLink: {
         color: '#61dafb',
     },
 }))
@@ -30,15 +37,10 @@ export default function App() {
     const classes = useStyles()
 
     return (
-        <Box className={classes.App}>
-            <Typography variant="h1" className={classes.AppHeader}>
-                <img src="/logo.svg" className={classes.AppLogo} alt="logo" />
-                <Typography>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </Typography>
-                <a className={classes.AppLink} href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-                    Learn React
-                </a>
+        <Box className={clsx(classes.body, classes.app)}>
+            <Typography variant="h1" className={classes.appHeader}>
+                <img src="/logo.svg" className={classes.appLogo} alt="logo" />
+                <Typography>Welcome to react-typescript-starter-app</Typography>
             </Typography>
         </Box>
     )
