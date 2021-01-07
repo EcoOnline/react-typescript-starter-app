@@ -10,7 +10,6 @@ const useStyles = makeStyles((theme) => ({
     AppLogo: {
         height: '40vmin',
         pointerEvents: 'none',
-        animation: `$AppLogoSpin 1s ${theme.transitions.easing.easeInOut}`,
     },
     AppHeader: {
         backgroundColor: '#282c34',
@@ -24,14 +23,6 @@ const useStyles = makeStyles((theme) => ({
     },
     AppLink: {
         color: '#61dafb',
-    },
-    '@keyframes AppLogoSpin': {
-        from: {
-            transform: 'rotate(0deg)',
-        },
-        to: {
-            transform: 'rotate(360deg)',
-        },
     },
 }))
 
