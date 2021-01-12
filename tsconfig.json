@@ -1,27 +1,25 @@
 {
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "module": "esnext",
-    "checkJs": false,
-    "target": "es2018",
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node",
-    "noEmit": true,
-    "strict": true,
-    "esModuleInterop": true,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true
-  },
-  "include": [
-    "src"
-  ]
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "module": "esnext",
+        "checkJs": false,
+        "target": "es2018",
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "node",
+        "noEmit": true,
+        "strict": true,
+        "esModuleInterop": true,
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "baseUrl": "src",
+        "rootDir": "./src",
+        "outDir": "./build"
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "build", "src/server"]
 }
