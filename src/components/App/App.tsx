@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography'
 import clsx from 'clsx'
 
 const useStyles = makeStyles(() => ({
-    body: {
+    container: {
         margin: 0,
     },
     code: {
@@ -52,7 +52,7 @@ export default function App() {
     }, [data, hasComponentInitialized, fetchData])
 
     return (
-        <Box className={clsx(classes.body, classes.app)}>
+        <Box className={clsx(classes.container, classes.app)}>
             <Typography variant="h1" className={classes.appHeader}>
                 <img src="/logo.svg" className={classes.appLogo} alt="logo" />
                 <Typography>Welcome to react-typescript-starter-app</Typography>
