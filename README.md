@@ -13,3 +13,7 @@ npm install
 npm run build
 npm start # or npm run start:dev
 ```
+
+Visit http://localhost:3000 to view app in browser.
+
+Hit http://localhost:3001/home to get test server endpoint response.
