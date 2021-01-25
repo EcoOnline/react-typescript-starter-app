@@ -33,7 +33,7 @@ const useStyles = makeStyles(() => ({
     },
 }))
 
-export default function App() {
+export default function App(): JSX.Element {
     const classes = useStyles()
     const [data, setData] = React.useState<string | undefined>()
     const [hasComponentInitialized, setHasComponentInitialized] = React.useState<boolean>(false)

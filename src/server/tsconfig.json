@@ -1,13 +1,14 @@
 {
     "extends": "../../tsconfig.json",
     "compilerOptions": {
-        "outDir": "../../dist",
+        "outDir": "../../build",
         "noEmit": false,
         "sourceMap": true,
-        "module": "esnext",
+        "module": "commonjs",
         "strict": true,
-        "target": "esnext",
-        "moduleResolution": "node"
+        "target": "es2018",
+        "moduleResolution": "node",
+        "typeRoots": ["./@types", "../../node_modules/@types"]
     },
     "exclude": ["../../build", "../client"],
     "include": ["."]
