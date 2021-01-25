@@ -1,5 +1,5 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core'
+import { makeStyles, CssBaseline } from '@material-ui/core'
 import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'
 import clsx from 'clsx'
@@ -52,12 +52,15 @@ export default function App(): JSX.Element {
     }, [data, hasComponentInitialized, fetchData])
 
     return (
-        <Box className={clsx(classes.container, classes.app)}>
-            <Typography variant="h1" className={classes.appHeader}>
-                <img src="/logo.svg" className={classes.appLogo} alt="logo" />
-                <Typography>Welcome to react-typescript-starter-app</Typography>
-                {!!data && <Typography>Server Response: {data}</Typography>}
-            </Typography>
-        </Box>
+        <React.Fragment>
+            <CssBaseline />
+            <Box className={clsx(classes.container, classes.app)}>
+                <Typography variant="h1" className={classes.appHeader}>
+                    <img src="/logo.svg" className={classes.appLogo} alt="logo" />
+                    <Typography>Welcome to react-typescript-starter-app</Typography>
+                    {!!data && <Typography>Server Response: {data}</Typography>}
+                </Typography>
+            </Box>
+        </React.Fragment>
     )
 }
