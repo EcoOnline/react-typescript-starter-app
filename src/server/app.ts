@@ -12,6 +12,10 @@ app.get('/home', (req: express.Request, res: express.Response) => {
     res.json({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' })
 })
 
+app.get('/health', (req: express.Request, res: express.Response) => {
+    res.send({ status: 'healthy' })
+})
+
 app.get('/*', function (req, res) {
     res.sendFile(path.join(buildDir, 'index.html'))
 })
