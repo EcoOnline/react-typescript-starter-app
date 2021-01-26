@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+    db:
+        image: mysql
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: rootSecret
+            MYSQL_DATABASE: appDb
+            MYSQL_USER: appDbUser
+            MYSQL_PASSWORD: appDbSecret
+        ports:
+            - '6306:3306'
