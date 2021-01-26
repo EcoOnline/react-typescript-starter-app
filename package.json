@@ -61,6 +61,8 @@
         "dev:server:webpack": "webpack --config webpack.config.server.js --watch",
         "dev:server:nodemon": "rm -f build/server.js && wait-on -l build/server.js && nodemon build/server.js",
         "dev:server": "concurrently -p name -c \"yellow,magenta\" -n \"webpack-server,nodemon-server\" \"npm run dev:server:webpack\" \"npm run dev:server:nodemon\"",
+        "docker:down": "docker-compose down",
+        "docker:up": "docker-compose up",
         "start:dev": "concurrently -p name -c \"yellow,magenta,blue\" -n \"webpack-server,nodemon-server,CRA\" \"npm run dev:server:webpack\" \"npm run dev:server:nodemon\" \"npm run dev:client\"",
         "start": "concurrently \"react-scripts start\" \"node build/server.js\"",
         "build:client": "react-scripts build",
